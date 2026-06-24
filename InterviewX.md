@@ -1253,97 +1253,240 @@ curl -X POST http://localhost:8000/api/query \
 
 ---
 
-## 💰 Business Comparison: Phase 1 vs Phase 2 vs Phase 3
+## 🎯 User Features by Phase
 
-| Aspect | Phase 1: Basic | Phase 2: Pro | Phase 3: Enterprise |
-|--------|---|---|---|
-| **Product Name** | InterviewX Basic | InterviewX Pro | InterviewX Enterprise |
-| **Time to Launch** | 1 week | 2-3 weeks | 3-4 weeks |
-| **Users at Launch** | 50-100 | 500+ (from Phase 1) | 5K+ (from Phase 1+2) |
-| **Core Feature** | Q&A on PDF | Q&A + Quizzes + Analytics | Full platform + B2B |
-| **Revenue Stream** | Free + Basic Paid ($5-10/mo) | Free + Pro ($15-20/mo) | B2B ($3K-20K/mo) + Consumer |
-| **Pricing Model** | Freemium | Freemium + B2B | Multi-tier + Enterprise |
-| **Monthly Revenue** | $100-500 | $3,000-5,000 | $400,000+ |
-| **Operating Cost** | $100-150/mo | $500-1K/mo | $5K-10K/mo |
-| **Net Margin** | -50% → +50% | +40% | +65% |
-| **Primary Users** | Individual students | Students + Coaches | Universities + Companies + Students |
-| **Hiring** | You alone | You + 1 engineer | 8-10 person team |
-| **Business Model** | B2C Freemium | B2C + B2B2C | B2B + B2B2C + B2C |
-| **Sales Effort** | Marketing only | Outbound + word-of-mouth | Sales team + partnerships |
-| **Technical Debt** | Low | Medium | Managed |
-| **Scalability** | Horizontal | Horizontal | Enterprise-grade |
-| **Fundraising** | Bootstrap | Friends & family / Angel | Series A ($5M+) |
+What can users actually DO after each phase?
 
 ---
 
-## 📈 Revenue Growth Trajectory
+### Phase 1: "InterviewX Basic" — Question & Answer
+**"Ask anything about system design from the book"**
 
+#### User Capabilities
 ```
-Phase 1 (Week 1-4)           Phase 2 (Week 5-8)        Phase 3 (Week 9+)
-├─ Launch MVP                ├─ Quiz generation         ├─ Enterprise sales
-├─ 100 free users            ├─ 1,000 free users        ├─ 10 B2B deals
-├─ 5% conversion             ├─ 10-15% conversion       ├─ 1000+ team users
-├─ $100-500 MRR              ├─ $3,000-5,000 MRR        ├─ $300,000+ MRR
-└─ Validate demand           └─ Product-market fit      └─ Scale to $5M ARR
-```
-
----
-
-## 🚀 Why This Vertical-Slice Approach?
-
-### Problem with Horizontal Layering (❌ Don't Do This)
-```
-Week 1-2: Build embeddings system
-Week 3-4: Build vector database
-Week 5-6: Build retrieval layer
-Week 7-8: Build frontend
-Week 9: FINALLY launch something usable
-→ 9 weeks with NO revenue, NO users, NO feedback
+✅ Upload PDF (System Design Interview book)
+✅ Ask unlimited questions about the content
+✅ Get AI-powered answers with real-time streaming
+✅ See which chapter/page the answer came from (citations)
+✅ Like/dislike answers for feedback
+✅ View question history
+✅ Create account and save conversations
 ```
 
-### Better: Vertical Slicing (✅ Do This)
+#### Sample User Journey
 ```
-Week 1: Launch InterviewX Basic → Get users → Get revenue ✅
-Week 3: Add Pro features → Increase ARPU → Get testimonials ✅
-Week 6: Enterprise features → B2B sales → Become investment-ready ✅
-→ Revenue every 2-3 weeks, user feedback drives development
+1. Sarah signs up → uploads System Design Interview PDF
+2. Asks: "How do I design a cache?"
+3. InterviewX responds: "Based on Chapter 5 (pages 120-145)..."
+4. Asks follow-up: "What about cache invalidation?"
+5. Responds with more context from the same chapter
+6. Sarah gives thumbs up (this answer was helpful)
+7. Later reviews her entire conversation history
 ```
+
+#### Use Cases
+- 📖 **Student Learning**: Read a chapter, ask questions to deepen understanding
+- 🎯 **Interview Prep**: Prepare answers to common system design questions
+- 📝 **Note Taking**: Build notes while asking clarifying questions
+- 🔍 **Quick Lookup**: Find specific concepts in the book without reading linearly
 
 ---
 
-## 📊 KPI Dashboard: Tracking Business Health
+### Phase 2: "InterviewX Pro" — Smart Learning Assistant
+**"Learn smarter with quizzes, adaptive search, and study tracking"**
 
-### Phase 1 Metrics
+#### Additional User Capabilities
 ```
-Daily Active Users (DAU)          Target: 100+ by end of week 4
-Monthly Recurring Revenue (MRR)   Target: $200+ by end of week 4
-Conversion Rate (free → paid)     Target: 5% by end of week 4
-Cost per User (LLM)               Target: <$0.02 per query
-User Satisfaction (NPS)           Target: 30+
-Churn Rate                        Target: <15%/month (acceptable for MVP)
+✅ All Phase 1 features, PLUS:
+
+✅ AI-Generated Quiz Mode
+  - Ask: "Quiz me on load balancing"
+  - Get 5 multiple-choice questions
+  - See answers with explanations
+  - Track quiz performance
+
+✅ Smart Search
+  - Ask fuzzy questions: "how do cache things"
+  - System finds multiple relevant chapters automatically
+  - Shows "Did you mean..." suggestions
+  - Returns 5+ variations of relevant content
+
+✅ Multi-turn Learning
+  - Context carries across conversations
+  - "What about..." follow-ups understand context
+  - System remembers what you've already learned
+  - Suggests related topics automatically
+
+✅ Study Dashboard
+  - Track topics studied
+  - See areas of weakness
+  - View time spent on each topic
+  - Performance metrics (quiz scores over time)
+
+✅ Personalized Suggestions
+  - "Based on your questions, you should review..."
+  - "You struggled with this topic, here are more resources"
+  - Recommended follow-up topics
+
+✅ Study Streaks & Goals
+  - Track daily study streaks
+  - Set learning goals ("Master 5 topics this week")
+  - Get daily reminders to learn
 ```
 
-### Phase 2 Metrics
+#### Sample User Journey
 ```
-DAU                               Target: 1,500+ (3x growth)
-MRR                               Target: $5,000+ (25x growth from Phase 1)
-Average Session Duration          Target: 25+ minutes (2.5x longer = more engagement)
-Quiz Completion Rate              Target: 8+ quizzes per user per month
-Paid Conversion                   Target: 15-20% (vs 5-10% in Phase 1)
-Enterprise Pipeline               Target: 3-5 deals in discussion
-NPS Score                         Target: 50+ (major improvement)
+1. Arjun (bootcamp student) logs in
+2. Takes quiz: "Quiz me on rate limiting" → Gets 5 questions
+3. Scores 3/5 → System marks as "needs review"
+4. Asks follow-up: "Compare rate limiting vs load balancing"
+5. System retrieves from 3 chapters automatically
+6. Generates comparison with 2 perspectives
+7. Dashboard shows: "Rate Limiting (60% mastered), Load Balancing (40% mastered)"
+8. System suggests: "Review Chapter 7 on rate limiting algorithms"
+9. He takes another quiz tomorrow → Progress tracked
 ```
 
-### Phase 3 Metrics
+#### Use Cases
+- 🎓 **Active Learning**: Quizzes reinforce understanding (better than passively reading)
+- 📊 **Progress Tracking**: See what you've mastered vs need to review
+- 🎯 **Exam Prep**: Identify weak areas and focus study time
+- 👥 **Group Study**: Compare progress with peers (if in bootcamp)
+- 🧠 **Spaced Repetition**: System recommends reviewing topics at optimal intervals
+
+---
+
+### Phase 3: "InterviewX Enterprise" — Complete Study Platform
+**"Collaborate, get expert feedback, and track your journey"**
+
+#### Additional User Capabilities (Beyond Phase 1 & 2)
 ```
-MRR                               Target: $300K+ (60x from Phase 1)
-Enterprise Customer Count         Target: 10+
-Corporate/Institutional Revenue   Target: $200K+/month (65% of total)
-Net Dollar Retention              Target: 120%+ (upsell to existing customers)
-Customer LTV                      Target: $2,000+ (LTV:CAC = 25:1)
-Monthly Burn Rate (if spending)   Target: <$30K (covered by revenue)
-Runway (if raising)               Target: 24+ months
+✅ All Phase 1 & 2 features, PLUS:
+
+✅ Interactive Mock Interviews
+  - "Generate a mock interview on system design"
+  - AI asks you questions one by one
+  - You provide answers in text/voice
+  - Get detailed feedback on each answer
+  - Score: completeness, clarity, correctness
+
+✅ Code Examples & Diagrams
+  - Click "Show code example" → See architecture diagrams
+  - Diagrams embedded with explanations
+  - Download diagrams for study notes
+  - See real-world implementations
+
+✅ Peer Comparison (in groups)
+  - If in a bootcamp/study group: Compare progress with peers
+  - See who scored well on which topics
+  - Leaderboards (friendly competition)
+  - "Most mastered concepts this week"
+
+✅ AI Explanations in Multiple Formats
+  - Text explanations (default)
+  - Conceptual diagrams (ASCII/visual)
+  - Step-by-step breakdowns
+  - Real-world analogies ("Cache is like...")
+  - Video explanations (AI-generated or human)
+
+✅ Advanced Search & Filtering
+  - Filter by difficulty level: Beginner/Intermediate/Advanced
+  - Filter by time: "Explain this in 2 minutes" vs "Deep dive"
+  - Filter by format: Text/Code/Diagrams
+  - Search across multiple books/PDFs
+
+✅ Learning Communities (if in organization)
+  - Ask questions in group discussion forum
+  - See how others approach problems
+  - Instructors can answer tough questions
+  - Shared resources & study materials
+
+✅ Integration with Calendar & Reminders
+  - Schedule study sessions
+  - Get reminders: "Time to review caching"
+  - Calendar shows: "Quiz on load balancing Thursday"
+  - Progress reports: "Your weekly learning summary"
+
+✅ Export & Certification
+  - Download certificate: "System Design Mastery - 85%"
+  - Share progress with employers/recruiters
+  - LinkedIn badge: "Completed System Design Interview"
+  - Proof of learning
+
+✅ Instructor/Coach Dashboard (if in group)
+  - Instructors see: Which students struggle with which topics
+  - See class-wide weak areas
+  - Recommend content to specific students
+  - Track class progress
+
+✅ Content Recommendations Engine
+  - "You should learn this next:" (AI-powered curriculum)
+  - Prerequisite tracking ("Master caching before load balancing")
+  - Learning path suggestions based on goals
+  - "10-week path to FAANG interviews"
+
+✅ Advanced Analytics
+  - "Your learning velocity": How fast you're progressing
+  - Time to mastery per topic
+  - Predict: When will you be ready for interviews?
+  - Compare to others in same cohort
 ```
+
+#### Sample User Journey
+```
+1. Priya (bootcamp student, 50 classmates) signs in
+2. Takes mock interview: "Design Instagram"
+3. AI asks questions progressively
+   - "What's the scale?"
+   - "How would you handle caching?"
+   - "Design the API..."
+4. She answers; AI evaluates each answer
+5. Score: 72/100 with feedback:
+   - ✅ Good database schema
+   - ❌ Missed load balancing approach
+   - 🤔 Cache strategy could be more detailed
+6. Dashboard shows:
+   - Her progress: 73% mastered
+   - Class average: 65% mastered
+   - She's in top 15 students
+7. System suggests: "Review Chapter 8 on load balancing"
+8. She joins study group discussion:
+   - Asks: "What load balancing strategy would you use?"
+   - Gets answers from 5 classmates
+   - Instructor clarifies misconceptions
+9. Takes another mock interview Friday → Scores 82/100
+10. Instructor sends: "Great progress this week, Priya!"
+11. Download certificate to share with recruiters
+```
+
+#### Use Cases
+- 🎤 **Interview Simulation**: Practice real interview questions with AI feedback
+- 👥 **Collaborative Learning**: Learn from peers in your cohort/group
+- 📈 **Progress Tracking**: Understand your learning trajectory over weeks
+- 🏆 **Certification**: Prove your knowledge to employers
+- 📚 **Comprehensive Learning**: Everything you need in one platform
+- 🤝 **Instructor Support**: Get expert feedback on your learning
+
+---
+
+## 📋 Feature Comparison: What Users Can Do
+
+| User Action | Phase 1 | Phase 2 | Phase 3 |
+|---|---|---|---|
+| **Ask questions** | ✅ | ✅ | ✅ |
+| **Get answers with citations** | ✅ | ✅ | ✅ |
+| **Generate quizzes** | ❌ | ✅ | ✅ |
+| **Smart search (multi-chapter)** | ❌ | ✅ | ✅ |
+| **See study dashboard** | ❌ | ✅ | ✅ |
+| **Multi-turn conversations** | ❌ | ✅ | ✅ |
+| **Mock interviews** | ❌ | ❌ | ✅ |
+| **View diagrams/code** | ❌ | ❌ | ✅ |
+| **Peer comparison** | ❌ | ❌ | ✅ |
+| **Join study groups** | ❌ | ❌ | ✅ |
+| **Get certificates** | ❌ | ❌ | ✅ |
+| **AI-generated video** | ❌ | ❌ | ✅ |
+| **Instructor feedback** | ❌ | ❌ | ✅ |
+| **Learning paths** | ❌ | ❌ | ✅ |
 
 ---
 
